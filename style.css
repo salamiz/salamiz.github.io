@@ -1,0 +1,213 @@
+/*
+Name: Zulkifli Salami
+File: style.css
+Description: CSS style sheet for a weather app
+*/
+
+
+/*
+body selector
+- Remove default margin set to "0", removes space on four side of body. 
+    Margin adds space outside the container
+- Choose font type for all text inside the website, and a backup font 
+- Set background color to light grey
+*/
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7f7;
+}
+
+
+/*
+- class selector "container"
+- Set background color to white
+- Add shadow effect to the container using box shadow. Has 4 parameters:
+    param 1: Set x-axis to "0"
+    param 2: Set y-axis to "0"
+    param 3: Blurness, set to 20px which blurs top and bottom
+    param 4: Set color, use rgba(red, green, blue, alpha i.e., Opacity)
+- Add margin to left and right, and make top and down 0. This makes the container centered
+- Add margin at top of container which pushes it down. 
+    CSS properties have a vertical order of prefernce on whatever comes next
+- Align all texts to center
+- Add rounded corners to the container using border-radius
+- Add padding, this adds space inside the container.
+*/
+.container{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+/*
+- Form selector
+- Change the display to flex, i.e., make elements of the form right next to each other
+- Center the children of the form horizontally
+- Center the children of the form vertically
+- Add some space at the bottom of the form
+*/
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/*
+- Target the form input of type "text"
+- Add padding which adds inner space, that makes the input field larger
+- Remove input border i.e., set to "none". Makes input field modern
+- Remove input outline (the line displayed when we click on the input field) 
+    i.e., set to "none". Makes input field modern
+- Change the font - size 
+- Set the width of the input
+*/
+form input[type="text"]{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 60%;
+}
+
+
+/*
+- Target the form button input of type "Submit"
+- Set background color to a shade of blue
+- Remove border using "none"
+- Add space inside the button, i.e., padding top and bottom 10px, left and right 20px
+- Add rounded corners to the container using border-radius
+- Set buitton text font size
+- Change the pointer when hovered over the button to pointer
+- Remove the outline
+- Add a transition to slow the hover effect  
+*/
+form input[type="Submit"]{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .3s ease;
+}
+
+
+/*
+- Target the form button input of type "Submit" when hovered over the button
+- Set the background color to a darker shade of blue
+*/
+form input[type="Submit"]:hover{
+    background-color: #0062cc;
+}
+
+
+/*
+- Class selector "icon", targeting image tag inside the class.
+- Set the width
+- Set the height
+- Add background size to fit any icon within the class
+- Prevent repeating of the image
+- Chanage background position to center on both x and y axis
+*/
+.icon img{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/*
+- Class selector "temperature"
+- Change font size
+- Make text bold, i.e., change font-weight to "bold"
+- Create spacing between this class and other class above and bottom. 
+    Set margin space for top and bottom "20px", and set left and right to "0"
+*/
+.temperature{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+/*
+- Class selector "description"
+- Change font-size
+- Add margin at bottom for spacing
+*/
+.description{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/*
+- Class selector "details"
+- Bring the children of the div right next to each other i.e, Set property "display" to value "flex"
+- Center the children horizontally
+- Center the children vertically
+- Set "flex-wrap" to "wrap", which allows the children to move to a new line in cases where there's no space.
+    This makes them responsive to the spacing on the page
+*/
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*
+- Target all the div inside the details class.
+- Add inner space of 20px
+- Change te background color
+- Add space between children 
+- Chnage "flex" property to '1'. This makes the children use the remaining space available of the div,
+    i.e, when there's extra space on moving to a new line
+- Add rounded corner for each children
+- Text align to the center
+- Set min height for each children to make each on the same height
+*/
+.details > div{
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin: 10px;
+    flex: 1;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 45px;
+}
+
+
+/*
+- Add a media query
+- Bring inputs on the form ontop of each other in mobile size,
+    target mobile size .i.e, "max-width: 768px"
+- Target the form
+- Change the flex direction and bring them ontop of each other, instead of row to column
+- Target the form input with type "text"
+- Set the width to 100%
+- Add outer space for spacing
+*/
+@media (max-width: 768px){
+    form{
+        flex-direction: column;
+    }
+    form input[type="Submit"]{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,62 @@
+<!--
+    Name: Zulkifli Salami
+    File: Weather App
+    Description: Creating a weather app that gets city info from a user and is submitted to a script to generate 
+    more info on the current weather data for a validated city.
+-->
+<!---->
+
+<!--Initializing HTML5 type-->
+<!DOCTYPE html>
+<!--lang attribute defines language of the page-->
+<html lang="en">
+<head>
+    <!--Setting the browser to recognize universal characters-->
+    <meta charset="UTF-8">
+    <!--Compatibility tag for Internet explorer, setting browser to use most recent engine for internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Set screen to devices screen, and initial zoom level set to 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--browser page title-->
+    <title>Weather App</title>
+    <!--Link to css style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Class "container for the whole App page"-->
+    <div class="container">
+        <!--Heading for the App-->
+        <h1>Weather App</h1>
+        <!--Form to get info from users-->
+        <form action="">
+            <!--input of type "text", placeholder used for display text on input is set-->
+            <input type="text" id="city-input" placeholder="Enter City">
+            <!--Submit button for the form-->
+            <input type="submit" value="Get Weather">
+        </form>
+        <!--Inner division on app page for weather data-->
+        <div id="weather-data">
+            <!--App div for weather icon-->
+            <div class="icon">
+                <!-- <img src="http://openweathermap.org/img/wn/01d.png" alt="Weather Icon"> -->
+            </div>
+            <!--Inner division on app page for temperature value-->
+            <div class="temperature"></div>
+            <!--Inner division on app page for temperature text description-->
+            <div class="description"></div>
+            <!--Inner division on app page for temperature details-->
+            <div class="details">
+                <!-- <div>Feels like: 23</div>
+                <div>Humidity: 40%</div>
+                <div>Wind speed: 5 m/s</div> -->
+            </div>
+        </div>
+    </div>
+    <!--
+        Add link to the JavaScript file. This is done just before the end of the body section because the website has 
+        to be loaded first in the browser, then functionality can be added to it. Otherwise, the JavaScript elements can't be 
+        read by the browser
+    -->
+    <script src="index.js"></script>
+</body>
+</html>
