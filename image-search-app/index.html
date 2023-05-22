@@ -1,0 +1,41 @@
+<!--
+    Name: Zulkifli Salami
+    File: Image Search App
+    Description: Creating a functional image search app that gets input on search parameter from a user and is submitted to a script to generate 
+    images related to the input parameter, this is generated using unsplash.com API.
+-->
+<!---->
+
+<!--Initializing HTML5 type-->
+<!DOCTYPE html>
+<!--lang attribute defines language of the page-->
+<html lang="en">
+<head>
+    <!--Setting the browser to recognize universal characters-->
+    <meta charset="UTF-8">
+    <!--Compatibility tag for Internet explorer, setting browser to use most recent engine for internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Set screen to devices screen, and initial zoom level set to 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--browser page title-->
+    <title>Image Search App</title>
+    <!--Link to css style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- h1 tag for title of website -->
+    <h1>Image Search App</h1>
+    <!-- form used to get input from the user -->
+    <form>
+        <!-- input of tyoe text, with id set to track changes inside JavaScript -->
+        <input type="text" id="search-input" placeholder="Search for images...." />
+        <!-- buttton to submit input into JavaScript -->
+        <button id="search-button">Search</button>
+    </form>
+    <!-- div to display images -->
+    <div class="search-results">
+    </div>
+    <button id="show-extra-results">Show more</button>
+    <script src="index.js"></script>
+</body>
+</html>

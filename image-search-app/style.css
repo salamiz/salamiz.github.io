@@ -1,0 +1,278 @@
+/* 
+Name: Zulkifli Salami
+File: style.css
+Description: CSS style sheet for a Image Search app 
+*/
+
+
+/*
+body selector
+- Set background color to light grey
+- Set the font-family of the texts
+- Set the line-height, which specificies the height of a line i.e add space between elements.
+    line-height set to number i.e number multiplied with current font-size to set the line-height.
+- Set margin to 0, this nullifies any space between elements and browser wall.
+*/
+body{
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* 
+h1 selector 
+- Set the font size to 36px
+- Set font-weight to Bold, to make it thick
+- Set text-align to center to bring text to center
+- Set margin top to 40px, to add space at the top and bring text down
+- Set margin bottom to 60px, add space at the bottom of text
+*/
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+
+/* 
+form selector
+- Set display to flex, in order to center items in the form i.e. making items placed next to each other.
+- Set justify-content to center, brings items to the center horizontally
+- Set align-items to center, brings items to the center vertically 
+- Set margin bottom to 60px, add space at the bottom of text
+*/
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+
+/* 
+form input selector using id: search-input. Syntax to select id is '#idname' 
+- Set the width to 60%, making it longer
+- Set maximum width to 400px to limit width in cases of bigger screens
+- Add padding 10px to top and bottom, 20px to left and right. Makes the input bigger as padding targets the space between the content and border of the element
+- Remove the border for design purpose. Set border to none
+- Add shadow effect to the input field using box shadow. Has 4 parameters:
+    param 1: Set x-axis to "0"
+    param 2: Set y-axis to "0"
+    param 3: Blurness, set to 5px which blurs top and bottom
+    param 4: Set color, use rgba(red, green, blue, alpha i.e. Opacity)
+- Add rounded corners to the input field using border-radius
+- Set the font size to 18px
+- Set the color of input element, i.e. foreground color of text and text decorations. 
+    Set to dark grey.
+*/
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* 
+form button selector using id: search-button
+- Add padding 10px to top and bottom, 20px to left and right. Making it similar to input field.
+- Set background color to a shade of blue
+- Set foreground color of text to white
+- Remove the border for design purpose. Set border to none
+- Set the font size to 18px, making the button exact size as input field
+- Add similar box shadow to that of input field
+- Change the cursor when hovered over the button to pointer
+- Add rounded corners to the container using border-radius
+- Add a transition to slow the hover effect, targeting the background-color property
+*/
+#search-button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color .3s ease-in-out;
+}
+
+
+/* 
+Target the form button when hovered over 
+- Set the background-color
+*/
+#search-button:hover{
+    background-color: #0062cc;
+}
+
+
+/* 
+Target the div class 'search-results' with syntax '.class-name'
+- Set display to flex, in order to center items in the form i.e. making items placed next to each other.
+- Set "flex-wrap" to "wrap", which allows the items to move to a new line in cases where there's no space.
+    This makes them responsive to the spacing on the page
+- Set justify-content to space-between, Items will have space between them horizontally
+- Set maximum width to 1200px in cases of bigger screens
+- Set margin to 0 for top and bottom, and auto to left and right to center images
+- Add padding 20px for spacing 
+*/
+.search-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* 
+Target the div class 'individual-result', to style the div container
+- Set margin bottom to 60px, adds space between elements in the div
+- Set width to 30%, for bigger screens design purpose
+- Set border radius to 5px
+- Add box-shadow
+- Add overflow set to 'hidden', to clip the image covering the border radius
+*/
+.individual-result{
+    margin-bottom: 60px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+
+/* 
+Targert the individual-result class when hovered over
+- Set transform to scale(1.1) to enlarge the image
+*/
+.individual-result:hover{
+    transform: scale(1.1);
+}
+
+
+/* 
+Target the div class 'individual-result' and all images within the class with syntax '.class-name img', just to style the images
+- Set the width to 100%
+- Set height to 200px
+- Set object-fit to cover, i.e. specifiying how img or video should be resized to fit its container.
+    'cover' sets image to keep its aspect ratio and fill the given dimension. The image will be clipped to fit.
+- Add a transition to the transform property to slow the enlarge effect of transform
+*/
+.individual-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+
+/* 
+Target the div class 'individual-result' and the anchor tag 
+- Add padding 10px, add some space between content and border
+- Set display to block, i.e. displayed like a paragraph
+- Set foreground color to dark grey
+- Set text-decoration to 'none', i.e. removing the underline on the text
+Add a transition to the background color property to slow the enlarge effect of transform
+*/
+.individual-result a{
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+
+
+/* 
+Targert the individual-result class and anchor tags when hovered over
+- Set background color to light grey
+*/
+.individual-result:hover a{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+/* 
+Target the button of id: 'show-extra-results'
+- Set background color to light green
+- Set border to none
+- Set foreground color to white
+- Add padding 10px to top and bottom, 20px to left and right.
+- Set display to block, i.e. makes element like a paragraph taking all the space
+- Set margin to 20px for top and bottom, and auto to left and right to center element
+- Align text to the center
+- Add rounded corners to the container using border-radius
+- Change the cursor when hovered over the button to pointer
+- Add a transition to slow the hover effect, targeting the background-color property
+- Set display to none, i.e. we don't see the button until a result is fetched
+*/
+#show-extra-results{
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    display: none;
+}
+
+
+/* 
+Target the button of id: 'show-extra-results' when hovered over 
+- Set the background-color
+*/
+#show-extra-results:hover{
+    background-color: #0062cc;
+}
+
+
+
+/*
+- Add a media query for a tablet size screen, tablet size .i.e, "max-width: 768px"
+- Target the div class '.search-result'
+    - Change the width to 45%
+*/
+@media screen and (max-width: 768px){
+    .individual-result{
+        width: 45%;
+    }
+}
+
+
+/*
+- Add a media query for a mobile size screen, mobile size .i.e, "max-width: 480px"
+- Target the div class '.search-result'
+    - Change the width to 100%
+- Target the form
+    - Change the flex direction and bring them ontop of each other, instead of row to column
+- Target the form input field
+    - Add margin to the bottom for spacing between field and Search button
+    - Set the width to 85%
+*/
+@media screen and (max-width: 480px){
+    .individual-result{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+    }
+    #search-input {
+        margin-bottom: 20px;
+        width: 85%;
+    }
+}
