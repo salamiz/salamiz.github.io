@@ -1,0 +1,157 @@
+/* 
+Name: Zulkifli Salami
+File: style.css
+Description: CSS style sheet for a Calculator app 
+*/
+
+
+/* 
+Universal Style Selector "*"
+- Universal box-sizing is set to border-box. i.e, how the width and height of an element are calculated: 
+should they include padding and borders, or not. In this case, border-box means they should.
+- Set margin to zero
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+
+/* 
+Div class selector: calculator
+- Change background-color to light grey
+- Set padding to 20px
+- set max width to 400px
+- Set margin to 0 up and down, auto left and right. Sets the App to the middle of the page
+and equal space left to right
+- Add border with solid, 1px and color of ccc i.e darker grey
+- Add shadow effect to the input field using box shadow. Has 4 parameters:
+    param 1: Set x-axis to "0"
+    param 2: Set y-axis to "0"
+    param 3: Blurness, set to 5px which blurs top and bottom
+    param 4: Set color, use rgba(red, green, blue, alpha i.e. Opacity)
+- Make the corners of the App rounded using border-radius 5px
+- Add some space at the top, i.e 30px
+*/
+.calculator{
+    background-color: lightgrey;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+
+/* 
+id selector: result
+- Set width to 100%
+- Add padding of 10px to increase inner space
+- Set font size to 24px, increases size of text
+- Set border to none to remove border
+- Add shadow effect inside the input field using the same values as the calculator container box shadow
+- Set border radius to 5px
+*/
+#result {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+    border-radius: 5px;
+}
+
+
+/* 
+Div class selector: buttons
+- Set display to grid
+- Set grid template columns to repeat 4 i.e the number of columns and the width of each column in a grid layout
+1fr sets the width of each column to contain the available space
+- Set grid gap to 10 px
+- Set margin top to 20px
+*/
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* 
+Button selector
+- Add padding of 10px
+- Set font size to 24px
+- Set border to none
+- Set box-shadow to same values as box-shadow in app
+- Set border radius to same value for consistent design
+- Set cursor to pointer
+- Add a transition to slow the hover effect, targeting the background-color property
+*/
+button {
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+
+/* 
+Button selector when hovered upon
+- Set background color to ddd
+*/
+button:hover {
+    background-color: #ddd;
+}
+
+
+/* 
+Button selector of class: clear
+- Set background color to ff4136
+- Set text color to white
+*/
+.clear {
+    background-color: #ff4136;
+    color: white;
+}
+
+
+/* 
+Button selector of class: number and decimal
+- Set background color to fff
+- Set text color to #333
+*/
+.number, .decimal {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* 
+Button selector of class: operator
+- Set background color to 0074d9
+- Set text color to #fff
+*/
+.operator {
+    background-color: #0074d9;
+    color: #fff;
+}
+
+
+/* 
+Button selector of class: equal
+- Set background color to 01ff70
+- Set the grid row to cover 3 rows, i.e, span 3
+- Set text color to #fff
+*/
+.equals {
+    background-color: #01ff70;
+    grid-row: span 3;
+    color: #fff;
+}

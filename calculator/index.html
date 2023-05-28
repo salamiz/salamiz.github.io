@@ -1,0 +1,72 @@
+<!--
+    Name: Zulkifli Salami
+    File: Calculator App
+    Description: Creating a functional calculator app. Using event listeners on an external JavaScript file,
+    each button will be able to call a certain function to execute specific functional tasks.
+-->
+<!---->
+
+<!--Initializing HTML5 type-->
+<!DOCTYPE html>
+<!--lang attribute defines language of the page-->
+<html lang="en">
+<head>
+    <!--Setting the browser to recognize universal characters-->
+    <meta charset="UTF-8">
+    <!--Compatibility tag for Internet explorer, setting browser to use most recent engine for internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Set screen to devices screen, and initial zoom level set to 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--browser page title-->
+    <title>Calculator App</title>
+    <!--Link to css style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container div, named calculator -->
+    <div class="calculator">
+        <!-- Input of type text, id is set to result to enable editing of field with JavaScript, 
+            input field set to "readonly" i.e. User can't make changes to the field -->
+        <input type="text" id="result" readonly>
+        <!-- Button div, named buttons which will consist of all the buttons -->
+        <div class="buttons">
+            <!-- Button to clear input field -->
+            <button class="clear">C</button>
+            <!-- Button of Arithmetic Operator for Division -->
+            <button class="operator">/</button>
+            <!-- Button of Arithmetic Operator for Multiplication -->
+            <button class="operator">*</button>
+            <!-- Button of Arithmetic Operator for Subtraction -->
+            <button class="operator">-</button>
+            <!-- Button of number -->
+            <button class="number">7</button>
+            <!-- Button of number -->
+            <button class="number">8</button>
+            <!-- Button of number -->
+            <button class="number">9</button>
+            <!-- Button of Arithmetic Operator for Addition -->
+            <button class="operator">+</button>
+            <!-- Button of number -->
+            <button class="number">4</button>
+            <!-- Button of number -->
+            <button class="number">5</button>
+            <!-- Button of number -->
+            <button class="number">6</button>
+            <!-- Button for Equal sign -->
+            <button class="equals">=</button>
+            <!-- Button of number -->
+            <button class="number">1</button>
+            <!-- Button of number -->
+            <button class="number">2</button>
+            <!-- Button of number -->
+            <button class="number">3</button>
+            <!-- Button of number -->
+            <button class="number">0</button>
+            <!-- Button of class Decimal -->
+            <button class="decimal">.</button>
+        </div>
+    </div>
+    <!-- Add JavaScript file. This is done at the end of the file to enable to entire HTML document load before executing the file -->
+    <script src="index.js"></script>
+</body>
+</html>
