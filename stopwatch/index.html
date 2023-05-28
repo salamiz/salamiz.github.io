@@ -1,0 +1,43 @@
+<!--
+    Name: Zulkifli Salami
+    File: Stopwatch App
+    Description: Creating a stopwatch app.
+-->
+<!---->
+
+<!--Initializing HTML5 type-->
+<!DOCTYPE html>
+<!--lang attribute defines language of the page-->
+<html lang="en">
+<head>
+    <!--Setting the browser to recognize universal characters-->
+    <meta charset="UTF-8">
+    <!--Compatibility tag for Internet explorer, setting browser to use most recent engine for internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Set screen to devices screen, and initial zoom level set to 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--browser page title-->
+    <title>Stopwatch App</title>
+    <!--Link to css style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- div with id of timer-->
+    <div id="timer">00:00:00</div>
+    <!-- div with id of buttons-->
+    <div id="buttons">
+        <!-- button with id of start-->
+        <button id="start">Start</button>
+        <!-- button with id of Stop-->
+        <button id="stop">Stop</button>
+        <!-- button with id of Reset-->
+        <button id="reset">Reset</button>
+    </div>
+
+    <!--
+        Add link to the JavaScript file. This is done just before the end of the body section because the body content has 
+        to be loaded first in the browser, then functionality can be added to it.
+    -->
+    <script src="script.js"></script>
+</body>
+</html>

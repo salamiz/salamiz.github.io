@@ -1,0 +1,139 @@
+/*
+Name: Zulkifli Salami
+File: style.css
+Description: CSS style sheet for a Stopwatch app
+*/
+
+
+/*
+body selector
+- Set background color to light grey
+- Set font type for all text inside the website, and a backup font
+- Set the display to flex, i.e., make elements right next to each other
+- Set flex direction to column i.e., make elements on top of each other
+- Center the elements horizontally
+- Set min height of screen to 100vh
+- Remove extra spaces on zoomed screen
+- Center the elements vertically
+*/
+body{
+    background-color: #f0f0f0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+/* 
+div selector with id: timer
+- Set font-size to 7times of the default size, i.e. 7rem
+- Set font weight to 700
+- Add text-shadow 
+- Set color to pink f92672
+- Set width
+- Set text align to the center
+- Set margin top and bottom, left and right 
+*/
+#timer{
+    font-size: 7rem;
+    font-weight: 700;
+    text-shadow: 2px 2px #f8a5c2;
+    color: #f92672;
+    width: 600px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+
+/* 
+div selector with id: buttons
+- Set the display to flex
+- Center elements horizontally
+*/
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 
+button selector
+- Set background color to f92672
+- Set text color to white
+- Set border to none. i.e remove all border lines
+- Set font size to 2 times original size
+- Set font-weight to bold
+- Set padding to 1.5 original size top and bottom, 4 times original size left and right
+- Set margin to 1 times original size
+- Set border-radius to 30px
+- Set cursor to pointer type
+- Set box-shadow, shadow effect using box shadow has 4 parameters:
+    param 1: Set x-axis to "0"
+    param 2: Set y-axis to "0"
+    param 3: Blurness, set to 20px which blurs top and bottom
+    param 4: Set color, use rgba(red, green, blue, alpha i.e., Opacity)
+- Set transition to slow the hover effect, targeting everything in the element, with .2s delay
+*/
+button{
+    background-color: #f92672;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.5rem 4rem;
+    margin: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.3);
+    transition: all .2s;
+}
+
+
+/* 
+button selector when hovered on by pointer
+- Set background color
+- Set box shadow, opacity is set to a higher value which makes it darker
+*/
+button:hover{
+    background-color: #f44583;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+}
+
+
+/* 
+button selector when disabled
+- Set opacity to 50%
+- Set cursor to default
+*/
+button:disabled{
+    opacity: .5;
+    cursor: default;
+}
+
+
+
+/*
+Add media query to handle different situations of useer screen size
+- media query of 800px or less
+    - Select id timer
+        - Set font size to 4 times original size
+        - Set width to 350px
+    - Select all buttons
+        - Set font size to 1.5 times original size
+        - Set padding to 1 rem 2 rem
+*/
+@media (max-width: 800px){
+    #timer{
+        font-size: 4rem;
+        width: 350px;
+    }
+    button{
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+}
